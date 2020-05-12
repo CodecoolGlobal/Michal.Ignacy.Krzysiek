@@ -8,9 +8,25 @@ GAME RULES:
 */
 
 let scores, roundScore, activePlayer, gamePlaying, previous;
+const instructionElement = document.getElementById('instruction');
+const howToPlayElement = document.getElementById('howToPlay');
+const buttonBack = document.getElementById('btnBack');
 
+document.getElementById('btn-start').addEventListener('click', function () {
+    instructionElement.classList.remove('show');
+    init();
+});
+
+document.getElementById('btnHowtoPlay').addEventListener('click', function () {
+    instructionElement.classList.remove('show');
+    howToPlayElement.classList.add('show');
+});
+
+buttonBack.addEventListener('click', function () {
+    instructionElement.classList.add('show');
+
+})
 document.querySelector('.btn-new').addEventListener('click', init);
-
 init();
 
 document.querySelector('.btn-roll').addEventListener('click', function () {
@@ -23,7 +39,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         diceDOM.style.display = 'block';
         diceDOM.src = 'dice-' + dice + '.png';
         //3.UPDATE THE ROUND SCORE IF THE ROLLED NUMBER WAS NOT A 1
-        if(dice === 6 && previous === 6){
+        if (dice === 6 && previous === 6) {
             document.querySelector('#current-' + activePlayer).textContent = 0;
             roundScore = 0;
             nextPlayer();
