@@ -16,7 +16,7 @@ body {
 
 .wrapper {
     width: 60em;
-    height: 40em;
+    height: 45em;
     border: solid;
     position: absolute;
     top: 50%;
@@ -53,6 +53,19 @@ body {
     color: #EB4D4D;
     margin-bottom: 130px;
 }
+
+.active { background-color: #00d9ff; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 10px;
+
+}
 .dice {
     position: absolute;
     border: solid;
@@ -74,6 +87,17 @@ body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
 
 .player-current-label {
     text-transform: uppercase;
@@ -86,4 +110,20 @@ body {
 .player-current-score {
     font-size: 30px;
 }
+.wrapper .clearfix button {
+    position: absolute;
+    width: 200px;
+    left: 40%;
+    color: #555;
+    background: none;
+    border: none;
+    font-size: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: Showcard Gothic;
+}
+.winner { background-color: #fab04f; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
 
