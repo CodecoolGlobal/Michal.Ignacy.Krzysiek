@@ -6,16 +6,17 @@
 body {
     background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(../resources/images/back.jpg);
     background-size: cover;
-    /*background-position: center;*/
+    background-position: center;
     font-family: Showcard Gothic;
     font-style: normal;
-    /* font-weight: 200; */
-    position: center;
-    color: aliceblue;
+    position: relative;
+    height: 100vh;
+    color: #555;
 }
 
 .wrapper {
-    width: 50em;
+    width: 60em;
+    height: 40em;
     border: solid;
     position: absolute;
     top: 50%;
@@ -26,13 +27,63 @@ body {
     overflow: hidden;
     border-radius: 1em;
 }
+.player-0-panel,
+.player-1-panel {
+    float: left;
+    width: 29em;
+    height: 40em;
+    padding: 5em;
+ }
+
+.player-name {
+      font-size: 3em;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 100;
+      margin-top: 0.1em;
+      margin-bottom: 0.1em;
+      position: relative;
+  }
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
 .dice {
-    /*position: absolute;*/
-    /*border: solid;*/
+    position: absolute;
+    border: solid;
     border-radius: 1em;
     left: 50%;
-    top: 178px;
-    /*transform: translateX(-50%);*/
+    top: 15em;
+    transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
+.player-current-box {
+    background-color: #6087FF;
+    border: solid;
+    border-radius: 1em;
+    color: rgb(0, 0, 0);
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
