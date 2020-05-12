@@ -9,6 +9,7 @@
     </head>
 
     <body>
+
         <div class="wrapper clearfix">
             <div class="player-0-panel active">
                 <div class="player-name" id="name-0">Player 1</div>
@@ -27,7 +28,6 @@
                     <div class="player-current-score" id="current-1">0</div>
                 </div>
             </div>
-
             <!-- <input type="inputText" id="myText" value=""> -->
 
             <button class="btn-new">New game</button>
@@ -36,7 +36,11 @@
             
             <img src="../resources/images/dice-5.png" alt="Dice" class="dice">
         </div>
-        
+        <div class ="start-message" id ="startMessage">
+            <div data-start-message>Dice Game</div>
+            <button id="startButton">Start</button>
+            <button id="howToPlayButton">How to play</button>
+        </div>
         <script src="../js/app.js"></script>
     </body>
 </html>
