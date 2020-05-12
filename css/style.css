@@ -1,4 +1,16 @@
-.container {
-text-align: center;
-color: blue;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(../resources/images/back.jpg);
+    background-size: cover;
+    /*background-position: center;*/
+    font-family: Showcard Gothic;
+    font-style: normal;
+    /* font-weight: 200; */
+    position: relative;
+    height: 100vh;
+    color: aliceblue;
 }
