@@ -85,7 +85,6 @@ function init() {
     gamePlaying = true;
 
     document.querySelector('.dice').style.display = 'none';
-
     document.getElementById('score-0').textContent = '0';
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
@@ -97,4 +96,6 @@ function init() {
     document.querySelector('.player-0-panel').classList.remove('active');
     document.querySelector('.player-1-panel').classList.remove('active');
     document.querySelector('.player-0-panel').classList.add('active');
+    document.querySelector('#name-0').classList.remove('winnerAnimation');
+    document.querySelector('#name-1').classList.remove('winnerAnimation');
 }
