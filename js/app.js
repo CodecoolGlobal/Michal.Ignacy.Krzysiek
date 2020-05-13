@@ -8,24 +8,32 @@ GAME RULES:
 */
 
 let scores, roundScore, activePlayer, gamePlaying, previous;
+
+const startGameElement = document.getElementById('startGame');
 const instructionElement = document.getElementById('instruction');
 const howToPlayElement = document.getElementById('howToPlay');
 const buttonBack = document.getElementById('btnBack');
 
 document.getElementById('btn-start').addEventListener('click', function () {
+    startGameElement.classList.remove('hide');
+    startGameElement.classList.add('show');
     instructionElement.classList.remove('show');
+    instructionElement.classList.add('hide');
     init();
 });
 
 document.getElementById('btnHowtoPlay').addEventListener('click', function () {
-    instructionElement.classList.remove('show');
+    howToPlayElement.classList.remove('hide');
     howToPlayElement.classList.add('show');
+    instructionElement.classList.add('hide');
 });
 
 buttonBack.addEventListener('click', function () {
+    instructionElement.classList.remove('hide');
     instructionElement.classList.add('show');
+    howToPlayElement.classList.add('hide');
+});
 
-})
 document.querySelector('.btn-new').addEventListener('click', init);
 init();
 

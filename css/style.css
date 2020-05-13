@@ -24,7 +24,7 @@ body {
     /* font-weight: 200; */
     position: relative;
     height: 100vh;
-    color: #555;
+    /*color: #555;*/
 }
 
 .instructions
@@ -36,24 +36,65 @@ body {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, .5);
-    /*display: flex;*/
     justify-content: center;
     align-items: center;
     /*transform: translate(-50%, -50%);*/
     /*left: 50%;*/
-    font-size: 1em;
+
     color: white;
     flex-direction: column;
 }
+.instructions div {
+    color: white;
+    font-size: 3em;
+}
+.instructions {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-.instructions .show {
+.how-to-play {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*margin-left: 5em;*/
+    /*margin-right: 5em;*/
+    color: white;
+}
+.how-to-play div {
+    font-size: 1em;
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /*margin-left: 5em;*/
+    /*margin-right: 5em;*/
+    color: white;
+}
+.how-to-play > div #gameRules{
+    font-size: 3em;
+}
+
+.show {
     display: flex;
 }
 
-.how-to-play .show {
-    display: flex;
+.hide {
+    display: none;
 }
 
+.how-to-play button {
+    font-size: 2em;
+    padding: 1em;
+}
 .instructions button {
     display: block;
     justify-content: center;
@@ -62,13 +103,30 @@ body {
     padding: 0.5em;
 }
 
+/*.wrapper {*/
+/*    width: 900px;*/
+/*    border: solid;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    background-color: rgb(155, 255, 255);*/
+/*    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);*/
+/*    overflow: hidden;*/
+/*    border-radius: 1em;*/
+/*}*/
 .wrapper {
-    width: 900px;
+    margin: 5em 10em;
+     display: block;
+    /* width: 900px; */
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     border: solid;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
     background-color: rgb(155, 255, 255);
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -146,11 +204,14 @@ body {
 .player-current-score {
     font-size: 30px;
 }
+.wrapper .clearfix button{
+    position: absolute;
+}
 
 button {
-    position: absolute;
+    /*position: absolute;*/
     width: 200px;
-    left: 40%;
+    /*left: 40%;*/
     color: #555;
     background: none;
     border: none;
@@ -179,14 +240,12 @@ button:hover {
     outline: none;
 } */
 
-.instructions button {
-    position: fixed;
-    top: 0.5em;
-}
+/*.instructions button {*/
+/*    position: fixed;*/
+/*    top: 0.5em;*/
+/*}*/
 
-.how-to-play button {
-    font-size: 3em;
-}
+
 
 .btn-new {
     top: 45px;
