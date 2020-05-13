@@ -42,12 +42,14 @@ body {
 .wrapper {
     width: 900px;
     border: solid;
+
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(155, 255, 255);
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
     /* overflow: hidden; */
     /* border-radius: 1em; */
 }
@@ -85,7 +87,10 @@ body {
     margin-bottom: 130px;
 }
 
-.active { background-color: #00d9ff; }
+.active { 
+    background-color: #00d9ff; 
+    border-radius: 1em;
+}
 .active .player-name { font-weight: 300; }
 
 .active .player-name::after {
@@ -180,5 +185,46 @@ animation:grow 400ms infinite alternate;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.winner { background-color: #fab04f; }
+.winner { 
+    /* background-color: #fab04f; */
+    border-radius: 1em; 
+    background: repeating-linear-gradient(
+        white 0%,
+        white 7.5px,
+        #fab04f 7.5px,
+        #fab04f 15px,
+        white 15px,
+        white 22.5px,
+        #fab04f 22.5px,
+        #fab04f 30px);
+animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+	from {
+		background-position: 0;
+	}
+
+	to {
+		background-position: 0 450px;
+	}
+}
+
+
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+.winnerAnimation {
+
+    
+        animation:winner 400ms infinite alternate;
+        }
+        @-webkit-keyframes winner {
+            from {
+                -webkit-transform:scale(1);
+                color: blue;
+            }
+            to {
+                -webkit-transform:scale(2);
+                color: red;
+            }
+        }

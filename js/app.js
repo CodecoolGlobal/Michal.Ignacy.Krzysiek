@@ -25,7 +25,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         //3.UPDATE THE ROUND SCORE IF THE ROLLED NUMBER WAS NOT A 1
         if(dice === 6 && previous === 6){
             document.querySelector('#current-' + activePlayer).textContent = 0;
-            roundScore = 0;
+            scores[activePlayer];
             nextPlayer();
         } else if (dice !== 1) {
             roundScore += dice;
@@ -52,6 +52,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
         //check if player won the game
         if (scores[activePlayer] >= inputScore) {
             document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+            document.querySelector('#name-' + activePlayer).classList.add('winnerAnimation');
             document.querySelector('.dice').style.display = 'none';
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
@@ -62,6 +63,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
         }
     }
 });
+
 
 function nextPlayer() {
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
