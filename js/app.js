@@ -21,7 +21,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         //2.DISPLAY THE RESULT
         const diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';
-        diceDOM.src = 'dice-' + dice + '.png';
+        diceDOM.src = '../resources/images/dice-' + dice + '.png';
         //3.UPDATE THE ROUND SCORE IF THE ROLLED NUMBER WAS NOT A 1
         if(dice === 6 && previous === 6){
             document.querySelector('#current-' + activePlayer).textContent = 0;
