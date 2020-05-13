@@ -15,7 +15,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(../resources/images/back.jpg);
     background-size: cover;
     background-position: center;
     font-family: Showcard Gothic;
@@ -27,9 +27,16 @@ body {
 }
 
 .instructions{
-    transform: translate(-50%, -50%);
+    /* margin: 0; */
     position: absolute;
-    left: 50%;
+    left: 39%;
+    top: -25%;
+}
+
+.winningScore{
+    position: absolute;
+    left: 34%;
+    top: 105%;
 }
 
 .wrapper {
@@ -41,8 +48,8 @@ body {
     transform: translate(-50%, -50%);
     background-color: rgb(155, 255, 255);
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    border-radius: 1em;
+    /* overflow: hidden; */
+    /* border-radius: 1em; */
 }
 
 .player-0-panel,
@@ -87,7 +94,7 @@ body {
     position: absolute;
     color: #EB4D4D;
     top: -7px;
-    right: 10px;
+    right: 5px;
     
 }
 
@@ -118,7 +125,7 @@ body {
 button {
     position: absolute;
     width: 200px;
-    left: 40%;
+    left: 39%;
     color: #555;
     background: none;
     border: none;
@@ -146,15 +153,21 @@ animation:grow 400ms infinite alternate;
     outline: none;
 } */
 
+.winningScore {
+    margin: 0 auto;
+    font-size: 150%;
+    border-radius: 1em;
+    text-align: center;
+}
 
 .btn-new { top: 45px;}
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 .btn-howToPlay { 
-    top: 0.5em;
     font-size: 3em;
-    position: absolute;
+    color: #fab04f;
 }
+
 
 .dice {
     position: absolute;

@@ -17,7 +17,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 
     if (gamePlaying) {
         //1.RANDOM NUMBER
-        var dice = Math.floor(Math.random() * 6) + 1;
+        const dice = Math.floor(Math.random() * 6) + 1;
         //2.DISPLAY THE RESULT
         const diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';
@@ -47,7 +47,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
         //update the ui
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
-        var inputScore = 20;
+        const inputScore = document.querySelector('.winningScore').value;
 
         //check if player won the game
         if (scores[activePlayer] >= inputScore) {
