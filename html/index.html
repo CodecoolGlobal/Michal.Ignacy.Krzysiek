@@ -22,12 +22,12 @@
     <div class="star star7"></div>
     <div class="star star8"></div>
 </section>
-<div class="menu show" id="menu">
+<div class="menu show center" id="menu">
     <div>Dice Game</div>
     <button class="btn-start" id="btn-start">Start</button>
     <button class="btn-howToPlay" id="btnHowtoPlay">How to play</button>
 </div>
-<div class="how-to-play hide" id="howToPlay">
+<div class="how-to-play hide center" id="howToPlay">
     <div>
         <div id="gameRules">Game rules:</div>
         <br>
@@ -40,34 +40,45 @@
     </div>
     <button class="btn-back" id="btnBack">Back</button>
 </div>
-<div class="wrapper clearfix content hide" id="content">
-    <input type="inputText" class="winningScore" value="" placeholder="THE WINNING SCORE">
-    <div class="player-0-panel active">
-        <div class="player-name" id="name-0">Player 1</div>
-        <div class="player-score" id="score-0">43</div>
-        <div class="player-current-box">
-            <div class="player-current-label">Current</div>
-            <div class="player-current-score" id="current-0">11</div>
+<div class="content-wrapper clearfix content hide center" id="content">
+
+    <div class="game-table">
+        <div class="player-0-panel panel active">
+            <div>
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+            </div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-0">11</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn-new">New game</button>
+            <button class="btn-roll">Roll dice</button>
+            <button class="btn-hold"></i>Hold</button>
+            <img src="../resources/images/dice-5.png" alt="Dice" class="dice" id="dice-1">
+            <img src=" ../resources/images/dice-5.png" alt="Dice" class="dice" id="dice-2">
+            <button class="startButton">Start</button>
+        </div>
+
+        <div class="player-1-panel panel">
+            <div class="player-name" id="name-1">Player 2</div>
+            <div class="player-score" id="score-1">72</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-1">0</div>
+            </div>
         </div>
     </div>
 
-    <div class="player-1-panel">
-        <div class="player-name" id="name-1">Player 2</div>
-        <div class="player-score" id="score-1">72</div>
-        <div class="player-current-box">
-            <div class="player-current-label">Current</div>
-            <div class="player-current-score" id="current-1">0</div>
-        </div>
-    </div>
-
-    <button class="btn-new">New game</button>
-    <button class="btn-roll">Roll dice</button>
-    <button class="btn-hold"></i>Hold</button>
-    <img src="../resources/images/dice-5.png" alt="Dice" class="dice" id="dice-1">
-    <img src=" ../resources/images/dice-5.png" alt="Dice" class="dice" id="dice-2">
-
-    <!-- <button class="startButton">Start</button> -->
+    <label for="winning-score"></label>
+    <input type="inputText" id="winning-score" class="winningScore" value="" placeholder="THE WINNING SCORE">
 </div>
+
+
+
 <script src="../js/app.js"></script>
 </body>
 
