@@ -1,137 +1,114 @@
 * {
-    margin: 0;
-    padding: 0;
+    /*padding: 0;*/
     box-sizing: border-box;
     font-family: Showcard Gothic;
 }
 
-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section .star {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    animation: animateStars 8s ease-in-out infinite, backgroundmove 16s linear infinite;
-}
-
-section .star.star1 {
-    animation-delay: 0s;
-    background: url(../resources/images/star1.png);
-}
-
-section .star.star2 {
-    animation-delay: -1s;
-    background: url(../resources/images/star2.png);
-}
-
-section .star.star3 {
-    animation-delay: -2s;
-    background: url(../resources/images/star3.png);
-}
-
-section .star.star4 {
-    animation-delay: -3s;
-    background: url(../resources/images/star4.png);
-}
-
-section .star.star5 {
-    animation-delay: -4s;
-    background: url(../resources/images/star5.png);
-}
-
-section .star.star6 {
-    animation-delay: -5s;
-    background: url(../resources/images/star6.png);
-}
-
-section .star.star7 {
-    animation-delay: -6s;
-    background: url(../resources/images/star7.png);
-}
-
-section .star.star8 {
-    animation-delay: -7s;
-    background: url(../resources/images/star8.png);
-}
-
-@keyframes animateStars {
-    0%, 20%, 40%, 60%, 80%, 100% {
-        opacity: 0;
-    }
-    10%, 30%, 50%, 70%, 90% {
-        opacity: 1;
-    }
-}
-
-@keyframes backgroundmove {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(2);
-    }
-}
-
-.clearfix::after {
+/* .clearfix::after {
     content: "";
     display: table;
     clear: both;
-}
+} */
 
 body {
-    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(../resources/images/back.jpg);
+    /*margin: 0;*/
+    background-image: url(../resources/images/back.jpg);
     background-size: cover;
     background-position: center;
+    font-family: Showcard Gothic;
     font-style: normal;
-    /* font-weight: 200; */
+    /*justify-content: center;*/
+    /*align-content: center;*/
+    /*!* font-weight: 200; *!*/
     position: relative;
     height: 100vh;
+    /*color: #555;*/
+}
+
+.menu
+
+
+.how-to-play {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    justify-content: center;
+    align-items: center;
+    /*transform: translate(-50%, -50%);*/
+    /*left: 50%;*/
+
+    color: white;
+    flex-direction: column;
+}
+
+.menu div {
+    color: white;
+    font-size: 3em;
+}
+
+.how-to-play {
+    color: white;
+}
+
+.how-to-play div {
+    font-size: 1em;
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /*margin-left: 5em;*/
+    /*margin-right: 5em;*/
+    color: white;
+}
+
+.how-to-play > div #gameRules {
+    font-size: 3em;
+}
+
+.show {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}
+
+.how-to-play button {
+    font-size: 2em;
+    padding: 1em;
+}
+
+.menu button {
+    font-size: 2em;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 0.5em;
     color: #555;
 }
 
-.instructions {
-    /* margin: 0; */
-    position: absolute;
-    left: 39%;
-    top: -22%;
+.show .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    /*border: solid;*/
+    /*background-color: rgb(155, 255, 255);*/
+    /*box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);*/
 }
 
-.winningScore {
-    position: absolute;
-    left: 30%;
-    top: 105%;
+.game-table {
+    background-color: #1095b8;
+    display: flex;
+    margin-bottom: 2em;
 }
 
-.wrapper {
-    width: 900px;
-    border: solid;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(155, 255, 255);
-    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
-    /* border-radius: 1em; */
-    /* overflow: hidden; */
-    /* border-radius: 1em; */
-}
-
-.player-0-panel, .player-1-panel {
-    width: 50%;
-    float: left;
-    height: 600px;
-    padding: 100px;
+.panel {
+    padding: 6em;
 }
 
 /**********************************************
@@ -139,22 +116,20 @@ body {
 **********************************************/
 
 .player-name {
-    font-size: 40px;
+    font-size: 3em;
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
     font-weight: 100;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 0.6em;
     position: relative;
+    width: 5em;
 }
 
 .player-score {
     text-align: center;
-    font-size: 80px;
+    font-size: 5em;
     font-weight: 100;
     color: #EB4D4D;
-    margin-bottom: 130px;
+    margin-bottom: 1em;
 }
 
 .active {
@@ -162,61 +137,50 @@ body {
     /* border-radius: 1em; */
 }
 
-.active .player-name {
+/* .active .player-name {
     font-weight: 300;
-}
+} */
 
-.active .player-name::after {
+/* .active .player-name::after {
     content: "\2022";
     font-size: 47px;
     position: absolute;
     color: #EB4D4D;
-    top: -7px;
-    right: 5px;
-}
+    top: 43px;
+    right: 43px;
+} */
 
 .player-current-box {
+    max-width: fit-content;
     background-color: #fab04f;
     border: solid;
     border-radius: 1em;
     color: rgb(0, 0, 0);
-    width: 40%;
     margin: 0 auto;
-    padding: 12px;
+    padding: 1em;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .player-current-label {
     text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 15px;
+    margin-bottom: 1em;
+    font-size: 1em;
     color: rgb(0, 0, 0);
     font-weight: bolder;
 }
 
 .player-current-score {
-    font-size: 30px;
+    font-size: 2em;
 }
 
 button {
-    position: absolute;
-    width: 200px;
-    left: 39%;
-    color: #555;
     background: none;
     border: none;
-    font-size: 30px;
+    font-size: 2em;
     text-transform: uppercase;
     cursor: pointer;
-    font-weight: 300;
-    transition: background-color 0.3s, color 0.3s;
-    font-family: Showcard Gothic;
-}
-
-button:hover {
-    color: rgb(0, 0, 0);
-    animation: grow 400ms infinite alternate;
+    margin-bottom: 1em;
 }
 
 @-webkit-keyframes grow {
@@ -228,10 +192,6 @@ button:hover {
     }
 }
 
-/* button:focus {
-    outline: none;
-} */
-
 .winningScore {
     margin: 0 auto;
     font-size: 150%;
@@ -239,7 +199,7 @@ button:hover {
     text-align: center;
 }
 
-.btn-new {
+/* .btn-new {
     top: 45px;
 }
 
@@ -249,77 +209,39 @@ button:hover {
 
 .btn-hold {
     top: 467px;
-}
+} */
 
-.btn-howToPlay {
-    font-size: 3em;
+button:hover {
     color: #fab04f;
-}
-
-.btn-howToPlay:hover {
-    color: #fab04f;
+    animation: grow 400ms infinite alternate;
 }
 
 .dice {
-    position: absolute;
-    border: solid;
-    /* border-radius: 1em; */
-    left: 50%;
-    top: 178px;
-    transform: translateX(-50%);
-    height: 100px;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    /* position: sticky; */
+    /* border: solid; */
+    border-radius: 1em;
+    /* left: 50%; */
+    /* top: 178px; */
+    /* transform: translateX(-50%); */
+    height: 6em;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-#dice-1 {
-    top: 120px;
+.center {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#dice-2 {
-    top: 250px;
-}
-
-.winner {
-    /* background-color: #fab04f; */
-    /* border-radius: 1em; */
-    background: repeating-linear-gradient(
-        
-         white 0%, 
-         white 7.5px, 
-         green 7.5px, 
-         green 15px, 
-         white 15px, 
-         white 22.5px, 
-         green 22.5px, 
-         green 30px);
-    animation: animate 5s linear infinite;
-}
-
-@keyframes animate {
-    from {
-        background-position: 0;
-    }
-    to {
-        background-position: 0 450px;
-    }
-}
-
-.winner .player-name {
-    font-weight: 300;
-    color: #EB4D4D;
-}
-
-.winnerAnimation {
-    animation: winner 400ms infinite alternate;
-}
-
-@-webkit-keyframes winner {
-    from {
-        -webkit-transform: scale(1);
-        color: red;
-    }
-    to {
-        -webkit-transform: scale(2);
-        color: blue;
-    }
+.panel-buttons {
+    top: -50em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: greenyellow;
 }

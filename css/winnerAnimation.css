@@ -1,0 +1,44 @@
+.winner {
+    /* background-color: #fab04f; */
+    /* border-radius: 1em; */
+    background: repeating-linear-gradient(
+
+            white 0%,
+            white 7.5px,
+            green 7.5px,
+            green 15px,
+            white 15px,
+            white 22.5px,
+            green 22.5px,
+            green 30px);
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: 0 450px;
+    }
+}
+
+.winner .player-name {
+    font-weight: 300;
+    color: #EB4D4D;
+}
+
+.winnerAnimation {
+    animation: winner 400ms infinite alternate;
+}
+
+@-webkit-keyframes winner {
+    from {
+        -webkit-transform: scale(1);
+        color: red;
+    }
+    to {
+        -webkit-transform: scale(2);
+        color: blue;
+    }
+}
