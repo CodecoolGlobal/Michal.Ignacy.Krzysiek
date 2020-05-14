@@ -1,10 +1,12 @@
 
 let scores, roundScore, activePlayer, gamePlaying, previous;
 
-const startGameElement = document.getElementById('startGame');
-const instructionElement = document.getElementById('instruction');
-const howToPlayElement = document.getElementById('howToPlay');
-const buttonBack = document.getElementById('btnBack');
+const menuElement = document.getElementById('menu');
+const startGameButton = document.getElementById('btn-start');
+const instructionButton = document.getElementById('btnHowtoPlay');
+const instructionElement = document.getElementById('howToPlay');
+const instructionBackButton = document.getElementById('btnBack');
+const contentElement = document.getElementById('content');
 
 document.getElementById('btn-start').addEventListener('click', function () {
     startGameElement.classList.remove('hide');
