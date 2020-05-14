@@ -5,8 +5,7 @@
     font-family: Showcard Gothic;
 }
 
-section 
-{
+section {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -16,86 +15,70 @@ section
     align-items: center;
 }
 
-section .star
-{
+section .star {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
-    animation: animateStars 8s ease-in-out infinite, 
-            backgroundmove 16s linear infinite;
+    animation: animateStars 8s ease-in-out infinite, backgroundmove 16s linear infinite;
 }
 
-section .star.star1
-{
+section .star.star1 {
     animation-delay: 0s;
     background: url(../resources/images/star1.png);
 }
 
-section .star.star2
-{
+section .star.star2 {
     animation-delay: -1s;
     background: url(../resources/images/star2.png);
 }
 
-section .star.star3
-{
+section .star.star3 {
     animation-delay: -2s;
     background: url(../resources/images/star3.png);
 }
 
-section .star.star4
-{
+section .star.star4 {
     animation-delay: -3s;
     background: url(../resources/images/star4.png);
 }
 
-section .star.star5
-{
+section .star.star5 {
     animation-delay: -4s;
     background: url(../resources/images/star5.png);
 }
 
-section .star.star6
-{
+section .star.star6 {
     animation-delay: -5s;
     background: url(../resources/images/star6.png);
 }
 
-section .star.star7
-{
+section .star.star7 {
     animation-delay: -6s;
     background: url(../resources/images/star7.png);
 }
 
-section .star.star8
-{
+section .star.star8 {
     animation-delay: -7s;
     background: url(../resources/images/star8.png);
 }
 
-@keyframes animateStars
-{
-    0%,20%,40%,60%,80%,100%
-    {
+@keyframes animateStars {
+    0%, 20%, 40%, 60%, 80%, 100% {
         opacity: 0;
     }
-    10%,30%,50%,70%,90%
-    {
+    10%, 30%, 50%, 70%, 90% {
         opacity: 1;
     }
 }
 
-@keyframes backgroundmove
-{
-    0%
-    {
+@keyframes backgroundmove {
+    0% {
         transform: scale(1);
     }
-    100%
-    {
+    100% {
         transform: scale(2);
     }
 }
@@ -108,7 +91,6 @@ section .star.star8
 
 body {
     background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(../resources/images/back.jpg);
-    
     background-size: cover;
     background-position: center;
     font-style: normal;
@@ -118,14 +100,14 @@ body {
     color: #555;
 }
 
-.instructions{
+.instructions {
     /* margin: 0; */
     position: absolute;
     left: 39%;
     top: -22%;
 }
 
-.winningScore{
+.winningScore {
     position: absolute;
     left: 30%;
     top: 105%;
@@ -134,27 +116,23 @@ body {
 .wrapper {
     width: 900px;
     border: solid;
-
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(155, 255, 255);
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
-    border-radius: 1em;
+    /* border-radius: 1em; */
     /* overflow: hidden; */
     /* border-radius: 1em; */
 }
 
-.player-0-panel,
-.player-1-panel {
+.player-0-panel, .player-1-panel {
     width: 50%;
     float: left;
     height: 600px;
     padding: 100px;
 }
-
-
 
 /**********************************************
 *** PLAYERS
@@ -179,11 +157,14 @@ body {
     margin-bottom: 130px;
 }
 
-.active { 
-    background-color: #00d9ff; 
-    border-radius: 1em;
+.active {
+    background-color: #00d9ff;
+    /* border-radius: 1em; */
 }
-.active .player-name { font-weight: 300; }
+
+.active .player-name {
+    font-weight: 300;
+}
 
 .active .player-name::after {
     content: "\2022";
@@ -192,11 +173,10 @@ body {
     color: #EB4D4D;
     top: -7px;
     right: 5px;
-    
 }
 
 .player-current-box {
-    background-color: #6087FF;
+    background-color: #fab04f;
     border: solid;
     border-radius: 1em;
     color: rgb(0, 0, 0);
@@ -234,15 +214,17 @@ button {
     font-family: Showcard Gothic;
 }
 
-button:hover { 
-animation:grow 400ms infinite alternate;
+button:hover {
+    color: rgb(0, 0, 0);
+    animation: grow 400ms infinite alternate;
 }
+
 @-webkit-keyframes grow {
     from {
-        -webkit-transform:scale(1);
+        -webkit-transform: scale(1);
     }
     to {
-        -webkit-transform:scale(1.1);
+        -webkit-transform: scale(1.1);
     }
 }
 
@@ -257,14 +239,26 @@ animation:grow 400ms infinite alternate;
     text-align: center;
 }
 
-.btn-new { top: 45px;}
-.btn-roll { top: 403px;}
-.btn-hold { top: 467px;}
-.btn-howToPlay { 
+.btn-new {
+    top: 45px;
+}
+
+.btn-roll {
+    top: 403px;
+}
+
+.btn-hold {
+    top: 467px;
+}
+
+.btn-howToPlay {
     font-size: 3em;
     color: #fab04f;
 }
 
+.btn-howToPlay:hover {
+    color: #fab04f;
+}
 
 .dice {
     position: absolute;
@@ -277,47 +271,47 @@ animation:grow 400ms infinite alternate;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.winner { 
+.winner {
     /* background-color: #fab04f; */
-    border-radius: 1em; 
+    border-radius: 1em;
     background: repeating-linear-gradient(
-        white 0%,
-        white 7.5px,
-        #fab04f 7.5px,
-        #fab04f 15px,
-        white 15px,
-        white 22.5px,
-        #fab04f 22.5px,
-        #fab04f 30px);
-animation: animate 5s linear infinite;
+        
+         white 0%, 
+         white 7.5px, 
+         green 7.5px, 
+         green 15px, 
+         white 15px, 
+         white 22.5px, 
+         green 22.5px, 
+         green 30px);
+    animation: animate 5s linear infinite;
 }
 
 @keyframes animate {
-	from {
-		background-position: 0;
-	}
-
-	to {
-		background-position: 0 450px;
-	}
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: 0 450px;
+    }
 }
 
-
-.winner .player-name { font-weight: 300; color: #EB4D4D; }
+.winner .player-name {
+    font-weight: 300;
+    color: #EB4D4D;
+}
 
 .winnerAnimation {
+    animation: winner 400ms infinite alternate;
+}
 
-    
-        animation:winner 400ms infinite alternate;
-        }
-        @-webkit-keyframes winner {
-            from {
-                -webkit-transform:scale(1);
-                color: blue;
-            }
-            to {
-                -webkit-transform:scale(2);
-                color: red;
-            }
-        }
-        
+@-webkit-keyframes winner {
+    from {
+        -webkit-transform: scale(1);
+        color: red;
+    }
+    to {
+        -webkit-transform: scale(2);
+        color: blue;
+    }
+}
