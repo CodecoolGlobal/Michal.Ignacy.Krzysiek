@@ -100,6 +100,7 @@ body {
 }
 
 .game-table {
+    background-color: #1095b8;
     display: flex;
     margin-bottom: 2em;
 }
@@ -145,16 +146,17 @@ body {
     font-size: 47px;
     position: absolute;
     color: #EB4D4D;
-    top: -7px;
-    right: 5px;
+    top: 43px;
+    right: 43px;
 }
 
 .player-current-box {
+    max-width: fit-content;
     background-color: #fab04f;
     border: solid;
     border-radius: 1em;
     color: rgb(0, 0, 0);
-    width: 40%;
+    /*width: 40%;*/
     margin: 0 auto;
     padding: 12px;
     text-align: center;
@@ -222,9 +224,10 @@ button:hover {
 }
 
 .dice {
-    position: absolute;
+    margin: 9rem 0;
+    position: sticky;
     border: solid;
-    /* border-radius: 1em; */
+     border-radius: 1em;
     left: 50%;
     top: 178px;
     transform: translateX(-50%);
@@ -240,6 +243,11 @@ button:hover {
     align-items: center;
 }
 
-.buttons {
+.panel-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.panel-buttons .center img{
 
 }
