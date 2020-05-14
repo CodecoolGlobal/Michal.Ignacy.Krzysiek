@@ -22,42 +22,42 @@ body{
 }
 
 .box-area .box1{
-    background-image: url(../resources/images/dice-1.png);
+    background-image: url(../resources/images/ttt/1.png);
     background-size: cover;
     background-position: center center;
     transform: translateZ(100px);
 }
 
 .box-area .box2{
-    background-image: url(../resources/images/dice-2.png);
+    background-image: url(../resources/images/ttt/2.png);
     background-size: cover;
     background-position: center center;
     transform: rotateX(90deg) translateZ(100px);
 }
 
 .box-area .box3{
-    background-image: url(../resources/images/dice-3.png);
+    background-image: url(../resources/images/ttt/3.jpg);
     background-size: cover;
     background-position: center center;
     transform:rotateY(90deg) rotateX(90deg) translateZ(100px);
 }
 
 .box-area .box4{
-    background-image: url(../resources/images/dice-4.png);
+    background-image: url(../resources/images/ttt/4.png);
     background-size: cover;
     background-position: center center;
     transform:rotateY(180deg) rotateZ(90deg) translateZ(100px);
 }
 
 .box-area .box5{
-    background-image: url(../resources/images/dice-5.png);
+    background-image: url(../resources/images/ttt/5.jpg);
     background-size: cover;
     background-position: center center;
     transform:rotateY(-90deg) rotateZ(90deg) translateZ(100px);
 }
 
 .box-area .box6{
-    background-image: url(../resources/images/dice-6.png);
+    background-image: url(../resources/images/ttt/6.jpg);
     background-size: cover;
     background-position: center center;
     transform:rotateX(-90deg) translateZ(100px);
