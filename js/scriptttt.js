@@ -1,7 +1,7 @@
 const statusDisplay = document.querySelector('.game--status');
 let gameActive = true;
 let currentPlayer = "O";
-let gameState = ["", "", "", "", "", "", "", "", "","", "", "", "", "", "", ""];
+let gameState = ["", "", "", "", "", "", "", "", "","", "", "", "", "", "", "", "", "", "", "", "", "", "", "",""];
 const winningMessage = () => `Player ${currentPlayer} has won!`;
 const drawMessage = () => `Game ended in a draw!`;
 const currentPlayerTurn = () => `It's ${currentPlayer}'s turn`;
@@ -12,6 +12,7 @@ function handleCellPlayed() {
 function handlePlayerChange() {
 
 }
+
 function handleResultValidation() {
 
 }
@@ -46,29 +47,33 @@ function handleCellClick(clickedCellEvent) {
             clickedCell.innerHTML = currentPlayer;
         }
         const winningConditions = [
-            [0, 1, 2, 3],
-            [4, 5, 6, 7],
-            [8, 9, 10, 11],
-            [12, 13, 14, 15],
-            [0, 4, 8, 12],
-            [1, 5, 9, 13],
-            [2, 6, 10, 14],
-            [3, 7, 11, 15],
-            [0, 5, 10, 15],
-            [3, 6, 9, 12]
-        ];
+            [0, 1, 2],
+            [1, 2, 3],
+            [2, 3, 4],
+            [5, 6, 7],
+            [6, 7, 8],
+            [7, 8, 9],
+            [10, 11, 12],
+            [11, 12, 13],
+            [12, 13, 14],
+            [20, 21, 22],
+            [21, 22, 23],
+            [22, 23, 24],
+            [15, 16, 17],
+            [16, 17, 18],
+            [17, 18, 19]
+            ];
         function handleResultValidation() {
             let roundWon = false;
-            for (let i = 0; i <= 9; i++) {
+            for (let i = 0; i <= 14; i++) {
                 const winCondition = winningConditions[i];
                 let a = gameState[winCondition[0]];
                 let b = gameState[winCondition[1]];
                 let c = gameState[winCondition[2]];
-                let d = gameState[winCondition[3]];
-                if (a === '' || b === '' || c === ''|| d === '') {
+                if (a === '' || b === '' || c === '') {
                     continue;
                 }
-                if (a === b && b === c && c === d) {
+                if (a === b && b === c && a === c) {
                     roundWon = true;
                     break
                 }
@@ -93,11 +98,13 @@ function handleCellClick(clickedCellEvent) {
             currentPlayer = currentPlayer === "X" ? "O" : "X";
             statusDisplay.innerHTML = currentPlayerTurn();
         }
+        
+
 
         function handleRestartGame() {
             gameActive = true;
             currentPlayer = "X";
-            gameState = ["", "", "", "", "", "", "", "", "","", "", "", "", "", "", ""];
+            gameState = ["", "", "", "", "", "", "", "", "","", "", "", "", "", "", "", "", "", "", "", "", "", "", "",""];
             statusDisplay.innerHTML = currentPlayerTurn();
             document.querySelectorAll('.cell')
                        .forEach(cell => cell.innerHTML = "");
