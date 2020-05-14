@@ -8,25 +8,31 @@ const instructionElement = document.getElementById('howToPlay');
 const instructionBackButton = document.getElementById('btnBack');
 const contentElement = document.getElementById('content');
 
-document.getElementById('btn-start').addEventListener('click', function () {
-    startGameElement.classList.remove('hide');
-    startGameElement.classList.add('show');
-    instructionElement.classList.remove('show');
-    instructionElement.classList.add('hide');
+startGameButton.addEventListener('click', function () {
+    [menuElement, instructionElement].forEach(element => hide(element));
+    show(contentElement);
     init();
 });
 
-document.getElementById('btnHowtoPlay').addEventListener('click', function () {
-    howToPlayElement.classList.remove('hide');
-    howToPlayElement.classList.add('show');
-    instructionElement.classList.add('hide');
+instructionButton.addEventListener('click', function () {
+    hide(menuElement);
+    show(instructionElement);
 });
 
-buttonBack.addEventListener('click', function () {
-    instructionElement.classList.remove('hide');
-    instructionElement.classList.add('show');
-    howToPlayElement.classList.add('hide');
+instructionBackButton.addEventListener('click', function () {
+    hide(instructionElement);
+    show(menuElement);
 });
+
+function show(element) {
+    element.classList.remove('hide');
+    element.classList.add('show');
+}
+
+function hide(element) {
+    element.classList.remove('show');
+    element.classList.add('hide');
+}
 
 document.querySelector('.btn-new').addEventListener('click', init);
 init();
