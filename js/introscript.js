@@ -1,2 +1,2 @@
 setTimeout(function(){
-    window.location='index.html';},10000);
+    window.location='indexttt.html';},10000);
