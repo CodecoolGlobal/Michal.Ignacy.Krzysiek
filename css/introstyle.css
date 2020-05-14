@@ -9,7 +9,7 @@ body{
 }
 
 .box-area{
-    animation: animate 10s ease-in-out infinite;
+    animation: animate 11s ease-in-out infinite;
     transform-style: preserve-3d;
     transform-origin: 100px 100px 0;
 }
@@ -33,7 +33,7 @@ body{
     background-image: url(../resources/images/space/2.jpg);
     background-size: cover;
     background-position: center center;
-    transform: rotateX(90deg) translateZ(200px) ;
+    transform: rotateY(90deg) translateZ(200px) ;
 }
 
 .box-area .box3{
