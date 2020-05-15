@@ -14,19 +14,21 @@ vabank.src = "../resources/sound/vabank.mp3";
 let isPlaying = false;
 
 
-// playMusicButton.addEventListener('click', function () {
-//     if (isPlaying) {
-//         vabank.pause()
-//       } else {
-//         vabank.play();
-//       }
-//     });
-//     vabank.onplaying = function() {
-//       isPlaying = true;
-//     };
-//     myAudio.onpause = function() {
-//       isPlaying = false;
-// };
+playMusicButton.addEventListener('click', function () {
+    if (isPlaying) {
+        vabank.pause()
+    } else {
+        vabank.play();
+    }
+    vabank.onplaying = function () {
+        isPlaying = true;
+    };
+    vabank.onpause = function () {
+        isPlaying = false;
+    };
+});
+
+
 
 startGameButton.addEventListener('click', function () {
     [menuElement, instructionElement].forEach(element => hide(element));
