@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const text = document.querySelector(".title");
 const strText = text.textContent;
 const splitText = strText.split("");
@@ -33,7 +32,6 @@ function complete() {
 setTimeout(function(){
 window.location='cube.html';},5000);
 
-=======
 
 let scores, roundScore, activePlayer, gamePlaying, previous;
 
@@ -158,4 +156,3 @@ function init() {
     document.querySelector('#name-0').classList.remove('winnerAnimation');
     document.querySelector('#name-1').classList.remove('winnerAnimation');
 }
->>>>>>> Ignacy
