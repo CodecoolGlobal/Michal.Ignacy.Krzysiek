@@ -14,7 +14,7 @@ vabank.src = "../resources/sound/vabank.mp3";
 startGameButton.addEventListener('click', function () {
     [menuElement, instructionElement].forEach(element => hide(element));
     show(contentElement);
-    vabank.play();
+    // vabank.play();
     init();
 });
 

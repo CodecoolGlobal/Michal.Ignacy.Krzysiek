@@ -1,0 +1,90 @@
+body{
+    background-color: black;
+}
+
+.wrapper{
+    width: 200px;
+    height: 200px;
+    margin: 15% auto;
+}
+
+.box-area{
+    animation: animate 11s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transform-origin: 100px 100px 0;
+}
+
+.box-area div{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    line-height: 400px;
+    border: 2px solid bisque;
+}
+
+.box-area .box1{
+    background-image: url(../resources/images/space/1.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform: translateZ(200px);
+}
+
+.box-area .box2{
+    background-image: url(../resources/images/space/2.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform: rotateY(90deg) translateZ(200px) ;
+}
+
+.box-area .box3{
+    background-image: url(../resources/images/space/3.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform:rotateY(90deg) rotateX(90deg) translateZ(200px);
+}
+
+.box-area .box4{
+    background-image: url(../resources/images/space/4.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform:rotateY(180deg) rotateZ(90deg) translateZ(200px);
+}
+
+.box-area .box5{
+    background-image: url(../resources/images/space/5.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform:rotateY(-90deg) rotateZ(90deg) translateZ(200px);
+}
+
+.box-area .box6{
+    background-image: url(../resources/images/space/6.jpg);
+    background-size: cover;
+    background-position: center center;
+    transform:rotateX(-90deg) translateZ(200px);
+}
+
+@keyframes animate{
+    from,to{
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    16%{
+        transform: rotateY(-90deg);
+    }
+    33%{
+        transform: rotateY(-90deg) rotateZ(90deg);
+    }
+    50%{
+        transform: rotateY(-180deg) rotateZ(90deg);
+    }
+    66%{
+        transform: rotateY(-270deg) rotateX(90deg);
+    }
+    83%{
+        transform: rotateY(90deg);
+    }
+    
+
+    
+
+}
