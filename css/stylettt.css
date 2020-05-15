@@ -1,6 +1,11 @@
 body {
-    font-family: "Arial", sans-serif;
-    background-color: cadetblue;
+    color: white;
+    background-image: url(../resources/images/back.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Showcard Gothic;
+    /*font-family: "Arial", sans-serif;*/
+    /*background-color: cadetblue;*/
 }
 section {
     text-align: center;
@@ -12,11 +17,12 @@ section {
     margin: 10px auto;
 }
 .cell {
+
     font-family: "Permanent Marker", cursive;
     width: 50px;
     height: 50px;
     box-shadow: 0 0 0 1px #333333;
-    border: 4px solid #333333;
+    border: 4px solid #1095b8;
     cursor: pointer;
     border-radius: 13px;
     margin: 4px;
@@ -27,4 +33,26 @@ section {
 :hover.cell{
     background-color:#dee9ec;
     opacity: .7;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.28);
+    border-radius: 0.5em;
+    border: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+button:hover {
+    color: #fab04f;
+    animation: grow 400ms infinite alternate;
+}
+@-webkit-keyframes grow {
+    from {
+        -webkit-transform: scale(1);
+    }
+    to {
+        -webkit-transform: scale(1.1);
+    }
 }
