@@ -6,7 +6,10 @@
 }
 
 body {
-    background-color: black;
+    background-image: url(../resources/images/back.jpg);
+    background-size: cover;
+    background-position: center;
+    /*background-color: black;*/
 }
 
 p {
@@ -25,6 +28,6 @@ span{
 }
 
 span.fade{
-    color: rgb(8, 165, 60);
+    color: #555;;
     opacity: 1;
 }

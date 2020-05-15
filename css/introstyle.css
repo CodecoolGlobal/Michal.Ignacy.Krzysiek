@@ -1,10 +1,13 @@
 body{
-    background-color: black;
+
+  background-image: url(../resources/images/back.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .wrapper{
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     margin: 15% auto;
 }
 
@@ -15,7 +18,7 @@ body{
 }
 
 .box-area div{
-    position: absolute;
+    position: fixed;
     width: 400px;
     height: 400px;
     line-height: 400px;
@@ -23,42 +26,42 @@ body{
 }
 
 .box-area .box1{
-    background-image: url(../resources/images/space/1.jpg);
+    background-image: url(../resources/images/dice-1.png);
     background-size: cover;
     background-position: center center;
     transform: translateZ(200px);
 }
 
 .box-area .box2{
-    background-image: url(../resources/images/space/2.jpg);
+    background-image: url(../resources/images/dice-2.png);
     background-size: cover;
     background-position: center center;
     transform: rotateY(90deg) translateZ(200px) ;
 }
 
 .box-area .box3{
-    background-image: url(../resources/images/space/3.jpg);
+    background-image: url(../resources/images/dice-3.png);
     background-size: cover;
     background-position: center center;
     transform:rotateY(90deg) rotateX(90deg) translateZ(200px);
 }
 
 .box-area .box4{
-    background-image: url(../resources/images/space/4.jpg);
+    background-image: url(../resources/images/dice-4.png);
     background-size: cover;
     background-position: center center;
     transform:rotateY(180deg) rotateZ(90deg) translateZ(200px);
 }
 
 .box-area .box5{
-    background-image: url(../resources/images/space/5.jpg);
+    background-image: url(../resources/images/dice-5.png);
     background-size: cover;
     background-position: center center;
     transform:rotateY(-90deg) rotateZ(90deg) translateZ(200px);
 }
 
 .box-area .box6{
-    background-image: url(../resources/images/space/6.jpg);
+    background-image: url(../resources/images/dice-6.png);
     background-size: cover;
     background-position: center center;
     transform:rotateX(-90deg) translateZ(200px);
