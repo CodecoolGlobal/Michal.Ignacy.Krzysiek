@@ -8,8 +8,25 @@ const instructionElement = document.getElementById('howToPlay');
 const instructionBackButton = document.getElementById('btnBack');
 const gameBackButton = document.getElementById('btnBack2');
 const contentElement = document.getElementById('content');
+const playMusicButton = document.getElementById('btn-music');
 const vabank = new Audio();
 vabank.src = "../resources/sound/vabank.mp3";
+let isPlaying = false;
+
+
+playMusicButton.addEventListener('click', function () {
+    if (isPlaying) {
+        vabank.pause()
+      } else {
+        vabank.play();
+      }
+    });
+    vabank.onplaying = function() {
+      isPlaying = true;
+    };
+    myAudio.onpause = function() {
+      isPlaying = false;
+};
 
 startGameButton.addEventListener('click', function () {
     [menuElement, instructionElement].forEach(element => hide(element));
@@ -31,7 +48,7 @@ instructionBackButton.addEventListener('click', function () {
 gameBackButton.addEventListener('click', function () {
     hide(contentElement);
     show(menuElement);
-    vabank.pause();
+    // vabank.pause();
 });
 
 function show(element) {
